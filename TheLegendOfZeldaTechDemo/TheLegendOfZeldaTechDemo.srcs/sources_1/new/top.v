@@ -42,11 +42,26 @@ GreenBorderFN fortnite (.V(V),.H(H),.border(border),.clk(clk));
 PlayerMovement link (.V(V),.H(H),.Vsync(Vsync),.Hsync(Hsync),.clk(clk),.U(btnU),.L(btnL),.R(btnR),.D(btnD),.ball(ball),.xcord(xcord),.ycord(ycord));
 
 
+// Link's Skin / Outer Shield and Cross
+//assign vgaRed   = 4'b1111;  // 252 -> 15
+//assign vgaGreen = 4'b1001;  // 152 -> 9
+//assign vgaBlue  = 4'b0011;  // 56 -> 3
+
+// Link's Tunic / Eyelids
+// assign vgaRed   = 4'b1000;  // 128 -> 8
+// assign vgaGreen = 4'b1101;  // 208 -> 13
+// assign vgaBlue  = 4'b0001;  // 16 -> 1
+
+// Link's Sleeves / Hair / Shoes / Eyes / Mouth
+// assign vgaRed   = 4'b1100;  // 200 -> 12
+// assign vgaGreen = 4'b0100;  // 76 -> 4
+// assign vgaBlue  = 4'b0000;  // 12 -> 0
 
 
 
 
-assign vgaGreen = {4{border}};
+
+assign vgaRed = {4{border}};
 assign vgaBlue = {4{ball}};
 
 
