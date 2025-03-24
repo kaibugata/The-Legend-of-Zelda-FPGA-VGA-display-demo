@@ -1,0 +1,99 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.1 (win64) Build 5094488 Fri Jun 14 08:59:21 MDT 2024
+| Date         : Sun Mar 23 23:45:03 2025
+| Host         : LAPTOP-NL3C8VQJ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    91 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |    12 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              53 |           21 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               5 |            2 |
+| Yes          | No                    | No                     |              32 |           12 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              35 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+--------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |                Enable Signal               |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+--------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|  not_so_slow/slowclk/clk | link/Xcounter/count2/CE0                   |                                            |                1 |              1 |         1.00 |
+|  not_so_slow/slowclk/clk | link/Ycounter/count2/CE0                   |                                            |                1 |              1 |         1.00 |
+|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count2/Up0             | wessamqdig/Hcounter/count2/ff_instance_4_0 |                1 |              1 |         1.00 |
+|  not_so_slow/slowclk/clk | wessamqdig/Vcounter/count2/Up0             | wessamqdig/Hcounter/count2/ff_instance_4_2 |                1 |              1 |         1.00 |
+|  not_so_slow/slowclk/clk | link/NWALLE/northWall                      | wessamqdig/ff_instance_VC[2]_1             |                1 |              2 |         2.00 |
+|  not_so_slow/slowclk/clk | link/RWALLE/rightWall                      | wessamqdig/R0                              |                1 |              2 |         2.00 |
+|  not_so_slow/slowclk/clk | link/LWALLE/leftWall                       | wessamqdig/ff_instance_HC[4]_0             |                1 |              2 |         2.00 |
+|  not_so_slow/slowclk/clk | link/SWALLE/southWall                      | wessamqdig/R08_out                         |                1 |              2 |         2.00 |
+|  not_so_slow/slowclk/clk |                                            | wessamqdig/Hcounter/count2/ff_instance_4_0 |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/VE/CE0                                |                                            |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/VE/CE0_1                              |                                            |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/Xcounter/count0/CE0_5                 |                                            |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/Xcounter/count0/CE0_2                 |                                            |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/Ycounter/count0/CE0_0                 |                                            |                1 |              5 |         5.00 |
+|  not_so_slow/slowclk/clk | link/Ycounter/count0/CE0_2                 |                                            |                1 |              5 |         5.00 |
+|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count0/UTC0_1          | wessamqdig/Hcounter/count2/ff_instance_4_0 |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count0/p_4_in          | wessamqdig/Hcounter/count2/ff_instance_4_2 |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count1/p_5_in          | wessamqdig/Hcounter/count2/ff_instance_4_2 |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count1/p_5_in_0        | wessamqdig/Hcounter/count2/ff_instance_4_0 |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count2/ff_instance_4_0 | wessamqdig/Hcounter/count2/ff_instance_4_2 |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk |                                            |                                            |               21 |             53 |         2.52 |
++--------------------------+--------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+
+

@@ -28,7 +28,8 @@ input clk,
 input U,D,L,R,
 output ball,
 output [15:0] xcord,
-output [15:0] ycord
+output [15:0] ycord,
+output [3:0] bord
 
     );
     
@@ -60,8 +61,8 @@ output [15:0] ycord
 
     
     //Linear Direction Only 1 at a time. No diagonals
-    countUD15LTRUE Xcounter (.clk(clk),.Up(right & ~left & ~down & ~up),.Dw(~right & left & ~down & ~up),.R(1'b0),.LD(1'b0),.Din(1'b0),.Q(NewX),.DTC(),.UTC());
-    countUD15LTRUE Ycounter (.clk(clk),.Up(~right & ~left & down & ~up),.Dw(~right & ~left & ~down & up),.R(1'b0),.LD(1'b0),.Din(1'b0),.Q(NewY),.DTC(),.UTC());
+    countUD15LTRUE Xcounter (.clk(clk),.Up(right & ~left & ~down & ~up & VEdge),.Dw(~right & left & ~down & ~up & VEdge),.R(1'b0),.LD(1'b0),.Din(1'b0),.Q(NewX),.DTC(),.UTC());
+    countUD15LTRUE Ycounter (.clk(clk),.Up(~right & ~left & down & ~up & VEdge),.Dw(~right & ~left & ~down & up & VEdge),.R(1'b0),.LD(1'b0),.Din(1'b0),.Q(NewY),.DTC(),.UTC());
     
     assign x = (H >= (16'd250 + NewX) & H < (16'd266 + NewX));
     assign y = (V >= (16'd69 + NewY) & V < (16'd85 + NewY));
@@ -83,10 +84,32 @@ output [15:0] ycord
 
     
     
-    assign leftWallCol = (H == 16'd8)&balls;
-    assign rightWallCol = (H == 16'd632)&balls;
-    assign northWallCol = (V == 16'd8)&balls;
-    assign southWallCol = (V == 16'd472)&balls;
+    //assign leftWallCol = (H <= 16'd8)&balls;
+    //assign rightWallCol = (H >= 16'd632)&balls;
+    //assign northWallCol = (V <= 16'd8)&balls;
+    //assign southWallCol = (V >= 16'd472)&balls;
+    
+    assign bord = {leftWallCol,rightWallCol,northWallCol,southWallCol};
+    
+    
+    wire leftWall;
+    FDRE #(.INIT(1'b0) ) LWALL (.C(clk),.R((H >= 16'd25)&balls),.CE(leftWall),.D(1'b1),.Q(leftWallCol));//25 is satisfactory
+    EdgeDetector LWALLE (.in((H == 16'd8)&balls),.clk(clk),.ans(leftWall));
+    
+    
+    wire rightWall;
+    FDRE #(.INIT(1'b0) ) RWALL (.C(clk),.R((H <= 16'd615)&balls),.CE(rightWall),.D(1'b1),.Q(rightWallCol));
+    EdgeDetector RWALLE (.in((H == 16'd631)&balls),.clk(clk),.ans(rightWall));
+    
+    
+    wire southWall;
+    FDRE #(.INIT(1'b0) ) SWALL (.C(clk),.R((V <= 16'd455)&balls),.CE(southWall),.D(1'b1),.Q(southWallCol));
+    EdgeDetector SWALLE (.in((V == 16'd472)&balls),.clk(clk),.ans(southWall));
+    
+    
+    wire northWall;
+    FDRE #(.INIT(1'b0) ) NWALL (.C(clk),.R((V >= 16'd25)&balls),.CE(northWall),.D(1'b1),.Q(northWallCol));
+    EdgeDetector NWALLE (.in((V == 16'd8)&balls),.clk(clk),.ans(northWall));
     
     
     

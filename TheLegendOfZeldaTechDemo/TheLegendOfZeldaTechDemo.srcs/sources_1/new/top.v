@@ -32,6 +32,8 @@ output [15:0] led
     
 wire clk,digsel,border,ball;
 wire [15:0] xcord,ycord;
+wire [15:0] V,H;
+wire [3:0]bord;
 
 
 
@@ -39,8 +41,10 @@ labVGA_clks not_so_slow (.clkin(clkin),.greset(sw[15]),.clk(clk),.digsel(digsel)
 Pixel_Address wessamqdig (.clk(clk),.V(V),.H(H));                         
 Sync let_that_sink_in (.V(V),.H(H),.clk(clk),.Vsync(Vsync),.Hsync(Hsync));
 GreenBorderFN fortnite (.V(V),.H(H),.border(border),.clk(clk));
-PlayerMovement link (.V(V),.H(H),.Vsync(Vsync),.Hsync(Hsync),.clk(clk),.U(btnU),.L(btnL),.R(btnR),.D(btnD),.ball(ball),.xcord(xcord),.ycord(ycord));
+PlayerMovement link (.V(V),.H(H),.Vsync(Vsync),.Hsync(Hsync),.clk(clk),.U(btnU),.L(btnL),.R(btnR),.D(btnD),.ball(ball),.xcord(xcord),.ycord(ycord),.bord(bord));
 
+
+assign led[3:0] = bord[3:0];
 
 // Link's Skin / Outer Shield and Cross
 //assign vgaRed   = 4'b1111;  // 252 -> 15
@@ -60,7 +64,8 @@ PlayerMovement link (.V(V),.H(H),.Vsync(Vsync),.Hsync(Hsync),.clk(clk),.U(btnU),
 
 
 
-
+assign vgaGreen = 0;
+//assign vgaBlue = 0;
 assign vgaRed = {4{border}};
 assign vgaBlue = {4{ball}};
 

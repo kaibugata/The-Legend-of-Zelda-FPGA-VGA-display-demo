@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/GreenBorderFN.v" \
+"../../../../TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/Pixel_Address.v" \
+"../../../../TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/Syncs.v" \
+"../../../../TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/countUD5L.v" \
+"../../../../TheLegendOfZeldaTechDemo.srcs/sources_1/imports/Downloads/labVGA_clks.v" \
+"../../../../TheLegendOfZeldaTechDemo.srcs/sources_1/new/top.v" \
+"../../../../TheLegendOfZeldaTechDemo.srcs/sim_1/imports/Downloads/test_lab6_sync.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
