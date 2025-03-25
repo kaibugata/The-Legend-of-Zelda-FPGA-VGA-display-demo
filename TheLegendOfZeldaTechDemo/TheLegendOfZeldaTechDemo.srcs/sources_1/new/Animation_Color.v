@@ -41,17 +41,17 @@ module Animation_Color(
     assign Blue[3] = 0;
     assign Blue[2] = 0;
     assign Blue[1] = downanim1SKIN;
-    assign Blue[0] = downanim1SKIN;
+    assign Blue[0] = downanim1SKIN|downanim1TUNIC;
     
-    assign Red[3] = downanim1SKIN|downanim1MISC;
+    assign Red[3] = downanim1SKIN|downanim1MISC|downanim1TUNIC;
     assign Red[2] = downanim1SKIN|downanim1MISC;
     assign Red[1] = downanim1SKIN;
     assign Red[0] = downanim1SKIN;
     
-    assign Green[3] = downanim1SKIN;
-    assign Green[2] = downanim1MISC;
+    assign Green[3] = downanim1SKIN|downanim1TUNIC;
+    assign Green[2] = downanim1MISC|downanim1TUNIC;
     assign Green[1] = 0;
-    assign Green[0] = downanim1SKIN;
+    assign Green[0] = downanim1SKIN|downanim1TUNIC;
     
     
     
@@ -80,10 +80,22 @@ module Animation_Color(
     (V == ycenter + 16'd7 & H >= xcenter - 16'd3 & H <= xcenter - 16'd1) |
     (V == ycenter + 16'd6 & H == xcenter - 16'd1)|
     (V == ycenter + 16'd6 & H >= xcenter + 16'd2 & H <= xcenter + 16'd4);
-
-
-    
+   
     //mouth, eyes, side of hair, hair, sleeve, shield, belt, left shoe, right shoe
+    
+    
+    assign downanim1TUNIC =
+    (V == ycenter + 16'd1 & H >= xcenter & H <= xcenter + 16'd4) |
+    (V == ycenter + 16'd3 & H == xcenter) |
+    (V == ycenter + 16'd5 & H >= xcenter & H <= xcenter + 16'd4) |
+    (V == ycenter + 16'd4 & H >= xcenter + 16'd2 & H <= xcenter + 16'd5) |
+    (V == ycenter + 16'd2 & H >= xcenter + 16'd2 & H <= xcenter + 16'd3) |
+    (V == ycenter & H >= xcenter + 16'd3 & H <= xcenter + 16'd4)|
+    (V == ycenter - 16'd1 & ((H >= xcenter + 16'd4 & H <= xcenter + 16'd5)|(H >= xcenter - 16'd4 & H <= xcenter - 16'd3)))|
+    (V == ycenter - 16'd4 & (H == xcenter - 16'd1 | H == xcenter + 16'd2)) |
+    (V >= ycenter - 16'd7 & V <= ycenter - 16'd6 & (H == xcenter - 16'd3 | H == xcenter + 16'd4)) |
+    (V >= ycenter - 16'd8 & V <= ycenter - 16'd7 & H >= xcenter - 16'd2 & H <= xcenter + 16'd3);
+    
     
     
     

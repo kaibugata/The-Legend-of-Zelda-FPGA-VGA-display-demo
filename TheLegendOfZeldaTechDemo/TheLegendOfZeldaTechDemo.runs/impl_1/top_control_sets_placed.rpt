@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1.1 (win64) Build 5094488 Fri Jun 14 08:59:21 MDT 2024
-| Date         : Mon Mar 24 18:55:29 2025
+| Date         : Mon Mar 24 21:12:20 2025
 | Host         : LAPTOP-NL3C8VQJ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              46 |           19 |
+| No           | No                    | No                     |              46 |           20 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               5 |            2 |
-| Yes          | No                    | No                     |              32 |           15 |
+| Yes          | No                    | No                     |              32 |           14 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              35 |           13 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -73,27 +73,27 @@ Table of Contents
 +--------------------------+--------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
 |       Clock Signal       |                Enable Signal               |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------+--------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
-|  not_so_slow/slowclk/clk | link/Ycounter/count2/CE0                   |                                            |                1 |              1 |         1.00 |
 |  not_so_slow/slowclk/clk | link/Xcounter/count2/CE0                   |                                            |                1 |              1 |         1.00 |
+|  not_so_slow/slowclk/clk | link/Ycounter/count2/CE0                   |                                            |                1 |              1 |         1.00 |
 |  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count2/Up0             | wessamqdig/Hcounter/count2/ff_instance_4_0 |                1 |              1 |         1.00 |
 |  not_so_slow/slowclk/clk | wessamqdig/Vcounter/count2/Up0             | wessamqdig/Hcounter/count2/ff_instance_4_2 |                1 |              1 |         1.00 |
-|  not_so_slow/slowclk/clk | link/LWALLE/leftWall                       | wessamqdig/R012_out                        |                1 |              2 |         2.00 |
 |  not_so_slow/slowclk/clk | link/SWALLE/southWall                      | wessamqdig/R08_out                         |                1 |              2 |         2.00 |
+|  not_so_slow/slowclk/clk | link/LWALLE/leftWall                       | wessamqdig/R012_out                        |                1 |              2 |         2.00 |
 |  not_so_slow/slowclk/clk | link/NWALLE/northWall                      | wessamqdig/ff_instance_VC[4]_0             |                1 |              2 |         2.00 |
 |  not_so_slow/slowclk/clk | link/RWALLE/rightWall                      | wessamqdig/R0                              |                1 |              2 |         2.00 |
 |  not_so_slow/slowclk/clk |                                            | wessamqdig/Hcounter/count2/ff_instance_4_0 |                2 |              5 |         2.50 |
-|  not_so_slow/slowclk/clk | link/Ycounter/count1/CE0                   |                                            |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/VE/CE0                                |                                            |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/VE/CE0_1                              |                                            |                2 |              5 |         2.50 |
+|  not_so_slow/slowclk/clk | link/Xcounter/count0/CE0_1                 |                                            |                3 |              5 |         1.67 |
+|  not_so_slow/slowclk/clk | link/Xcounter/count1/CE0                   |                                            |                1 |              5 |         5.00 |
 |  not_so_slow/slowclk/clk | link/Ycounter/count0/CE0_0                 |                                            |                2 |              5 |         2.50 |
-|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count0/UTC0            | wessamqdig/Hcounter/count2/ff_instance_4_0 |                1 |              5 |         5.00 |
+|  not_so_slow/slowclk/clk | link/Ycounter/count1/CE0                   |                                            |                2 |              5 |         2.50 |
 |  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count1/p_5_in          | wessamqdig/Hcounter/count2/ff_instance_4_0 |                1 |              5 |         5.00 |
+|  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count0/UTC0            | wessamqdig/Hcounter/count2/ff_instance_4_0 |                2 |              5 |         2.50 |
 |  not_so_slow/slowclk/clk | wessamqdig/Hcounter/count2/ff_instance_4_0 | wessamqdig/Hcounter/count2/ff_instance_4_2 |                2 |              5 |         2.50 |
 |  not_so_slow/slowclk/clk | wessamqdig/Vcounter/count0/p_4_in          | wessamqdig/Hcounter/count2/ff_instance_4_2 |                1 |              5 |         5.00 |
-|  not_so_slow/slowclk/clk | wessamqdig/Vcounter/count0/p_5_in          | wessamqdig/Hcounter/count2/ff_instance_4_2 |                2 |              5 |         2.50 |
-|  not_so_slow/slowclk/clk | link/VE/CE0_1                              |                                            |                2 |              5 |         2.50 |
-|  not_so_slow/slowclk/clk | link/VE/CE0                                |                                            |                3 |              5 |         1.67 |
-|  not_so_slow/slowclk/clk | link/Xcounter/count0/CE0_1                 |                                            |                2 |              5 |         2.50 |
-|  not_so_slow/slowclk/clk | link/Xcounter/count1/CE0                   |                                            |                2 |              5 |         2.50 |
-|  not_so_slow/slowclk/clk |                                            |                                            |               19 |             46 |         2.42 |
+|  not_so_slow/slowclk/clk | wessamqdig/Vcounter/count1/p_5_in          | wessamqdig/Hcounter/count2/ff_instance_4_2 |                1 |              5 |         5.00 |
+|  not_so_slow/slowclk/clk |                                            |                                            |               20 |             46 |         2.30 |
 +--------------------------+--------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
 
 
