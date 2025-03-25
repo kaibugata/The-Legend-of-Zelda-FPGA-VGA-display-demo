@@ -74,6 +74,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/Animation_Color.v
   C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/EdgeDetector.v
   C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/GreenBorderFN.v
   C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/Pixel_Address.v
