@@ -3,8 +3,8 @@
 # SW Build 5094488 on Fri Jun 14 08:59:21 MDT 2024
 # IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
 # SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
-# Start of session at: Mon Mar 24 21:09:54 2025
-# Process ID: 12728
+# Start of session at: Wed Mar 26 16:22:22 2025
+# Process ID: 8840
 # Current directory: C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.runs/synth_1/top.vds
@@ -17,8 +17,8 @@
 # CPU Physical cores:6
 # CPU Logical cores :12
 # Host memory       :17053 MB
-# Swap memory       :20502 MB
-# Total Virtual     :37556 MB
-# Available Virtual :7022 MB
+# Swap memory       :13527 MB
+# Total Virtual     :30580 MB
+# Available Virtual :15127 MB
 #-----------------------------------------------------------
 source top.tcl -notrace

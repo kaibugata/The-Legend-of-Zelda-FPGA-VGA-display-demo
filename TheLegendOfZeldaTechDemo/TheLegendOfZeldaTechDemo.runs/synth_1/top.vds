@@ -3,8 +3,8 @@
 # SW Build 5094488 on Fri Jun 14 08:59:21 MDT 2024
 # IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
 # SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
-# Start of session at: Mon Mar 24 21:09:54 2025
-# Process ID: 12728
+# Start of session at: Wed Mar 26 16:22:22 2025
+# Process ID: 8840
 # Current directory: C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.runs/synth_1/top.vds
@@ -17,13 +17,13 @@
 # CPU Physical cores:6
 # CPU Logical cores :12
 # Host memory       :17053 MB
-# Swap memory       :20502 MB
-# Total Virtual     :37556 MB
-# Available Virtual :7022 MB
+# Swap memory       :13527 MB
+# Total Virtual     :30580 MB
+# Available Virtual :15127 MB
 #-----------------------------------------------------------
 Sourcing tcl script 'C:/Users/Kailan/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 513.648 ; gain = 201.699
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 514.430 ; gain = 201.059
 Command: read_checkpoint -auto_incremental -incremental C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/utils_1/imports/synth_1/top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -37,12 +37,17 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2736
+INFO: [Synth 8-7075] Helper process launched with PID 13408
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1367.809 ; gain = 448.301
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1368.137 ; gain = 447.590
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'UTC3', assumed default net type 'wire' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/countUD5L.v:115]
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'EdgeDetector' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/EdgeDetector.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:41014]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:41014]
+INFO: [Synth 8-6155] done synthesizing module 'EdgeDetector' (0#1) [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/EdgeDetector.v:23]
 INFO: [Synth 8-6157] synthesizing module 'labVGA_clks' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/Downloads/labVGA_clks.v:24]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/Downloads/labVGA_clks.v:55]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73643]
@@ -95,9 +100,6 @@ INFO: [Synth 8-6155] done synthesizing module 'labVGA_clks' (0#1) [C:/Users/Kail
 INFO: [Synth 8-6157] synthesizing module 'Pixel_Address' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/Pixel_Address.v:23]
 INFO: [Synth 8-6157] synthesizing module 'countUD15LTRUE' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/countUD5L.v:102]
 INFO: [Synth 8-6157] synthesizing module 'countUD5L' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/countUD5L.v:23]
-INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:41014]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:41014]
 INFO: [Synth 8-6155] done synthesizing module 'countUD5L' (0#1) [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/countUD5L.v:23]
 WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'countUD5L' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/countUD5L.v:115]
 INFO: [Synth 8-6155] done synthesizing module 'countUD15LTRUE' (0#1) [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/countUD5L.v:102]
@@ -110,8 +112,6 @@ INFO: [Synth 8-6155] done synthesizing module 'Sync' (0#1) [C:/Users/Kailan/Docu
 INFO: [Synth 8-6157] synthesizing module 'GreenBorderFN' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/GreenBorderFN.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'GreenBorderFN' (0#1) [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/GreenBorderFN.v:23]
 INFO: [Synth 8-6157] synthesizing module 'PlayerMovement' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/PlayerMovement.v:23]
-INFO: [Synth 8-6157] synthesizing module 'EdgeDetector' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/EdgeDetector.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'EdgeDetector' (0#1) [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/imports/new/EdgeDetector.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'PlayerMovement' (0#1) [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/PlayerMovement.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Animation_Color' [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/Animation_Color.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Animation_Color' (0#1) [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/Animation_Color.v:23]
@@ -119,8 +119,6 @@ INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/Kailan/Docum
 WARNING: [Synth 8-3848] Net dp in module/entity top does not have driver. [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/top.v:24]
 WARNING: [Synth 8-3848] Net an in module/entity top does not have driver. [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/top.v:26]
 WARNING: [Synth 8-3848] Net seg in module/entity top does not have driver. [C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.srcs/sources_1/new/top.v:26]
-WARNING: [Synth 8-7129] Port clk in module Animation_Color is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ball in module Animation_Color is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[15] in module countUD15LTRUE is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dp in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port an[3] in module top is either unconnected or has no load
@@ -163,20 +161,20 @@ WARNING: [Synth 8-7129] Port sw[2] in module top is either unconnected or has no
 WARNING: [Synth 8-7129] Port sw[1] in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[0] in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1483.422 ; gain = 563.914
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1485.863 ; gain = 565.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1483.422 ; gain = 563.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1485.863 ; gain = 565.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1483.422 ; gain = 563.914
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1485.863 ; gain = 565.316
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1483.422 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1485.863 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -188,7 +186,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1573.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1587.609 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 49 instances were transformed.
   AND2 => LUT2: 12 instances
@@ -197,27 +195,27 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   BUF => LUT1: 1 instance 
   XOR2 => LUT2: 24 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1573.664 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1587.609 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -225,10 +223,10 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input   17 Bit       Adders := 2     
-	   2 Input   16 Bit       Adders := 34    
+	   2 Input   16 Bit       Adders := 35    
 +---XORs : 
-	   2 Input      1 Bit         XORs := 80    
-	   3 Input      1 Bit         XORs := 80    
+	   2 Input      1 Bit         XORs := 100   
+	   3 Input      1 Bit         XORs := 100   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -245,8 +243,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port clk in module Animation_Color is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ball in module Animation_Color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module countUD15LTRUE is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dp in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port an[3] in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port an[2] in module top is either unconnected or has no load
@@ -330,26 +327,30 @@ WARNING: [Synth 8-3332] Sequential element (link/Ycounter/count3/ff_instance_4) 
 WARNING: [Synth 8-3332] Sequential element (link/HE/ff_instance_1) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (link/HE/ff_instance_2) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (link/ff_ball) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (count3/ff_instance_1) is unused and will be removed from module countUD15LTRUE.
+WARNING: [Synth 8-3332] Sequential element (count3/ff_instance_2) is unused and will be removed from module countUD15LTRUE.
+WARNING: [Synth 8-3332] Sequential element (count3/ff_instance_3) is unused and will be removed from module countUD15LTRUE.
+WARNING: [Synth 8-3332] Sequential element (count3/ff_instance_4) is unused and will be removed from module countUD15LTRUE.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -367,37 +368,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -414,42 +415,42 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     3|
-|2     |CARRY4     |   274|
+|2     |CARRY4     |   286|
 |3     |LUT1       |    68|
-|4     |LUT2       |    84|
-|5     |LUT3       |    22|
-|6     |LUT4       |   692|
-|7     |LUT5       |    39|
-|8     |LUT6       |   197|
+|4     |LUT2       |    92|
+|5     |LUT3       |    26|
+|6     |LUT4       |   749|
+|7     |LUT5       |    50|
+|8     |LUT6       |   221|
 |9     |MMCME2_ADV |     1|
 |10    |STARTUPE2  |     1|
-|11    |FDRE       |   113|
+|11    |FDRE       |   133|
 |12    |IBUF       |     6|
 |13    |OBUF       |    18|
 |14    |OBUFT      |    24|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1587.609 ; gain = 667.062
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 86 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1573.664 ; gain = 563.914
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1573.664 ; gain = 654.156
+Synthesis finished with 0 errors, 0 critical warnings and 89 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1587.609 ; gain = 565.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1587.609 ; gain = 667.062
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1573.664 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 276 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1587.609 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 288 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1573.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1587.609 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 5463f58a
+Synth Design complete | Checksum: 7f859b86
 INFO: [Common 17-83] Releasing license: Synthesis
-80 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
+80 Infos, 135 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 1573.664 ; gain = 1048.352
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1573.664 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 1587.609 ; gain = 1063.289
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1587.609 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Kailan/Documents/GitHub/The-Legend-of-Zelda-FPGA-VGA-display-demo/TheLegendOfZeldaTechDemo/TheLegendOfZeldaTechDemo.runs/synth_1/top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 24 21:11:23 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 16:23:35 2025...

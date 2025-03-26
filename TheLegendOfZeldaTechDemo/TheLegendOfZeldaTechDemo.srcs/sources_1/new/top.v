@@ -35,15 +35,17 @@ wire [15:0] xcord,ycord;
 wire [15:0] V,H;
 wire [3:0]bord;
 wire [3:0]red,blue,green;
+wire vedge;
 
 
 
+EdgeDetector VE (.in(Vsync),.clk(clk),.ans(vedge));
 labVGA_clks not_so_slow (.clkin(clkin),.greset(sw[15]),.clk(clk),.digsel(digsel));
 Pixel_Address wessamqdig (.clk(clk),.V(V),.H(H));                         
 Sync let_that_sink_in (.V(V),.H(H),.clk(clk),.Vsync(Vsync),.Hsync(Hsync));
 GreenBorderFN fortnite (.V(V),.H(H),.border(border),.clk(clk));
 PlayerMovement link (.V(V),.H(H),.Vsync(Vsync),.Hsync(Hsync),.clk(clk),.U(btnU),.L(btnL),.R(btnR),.D(btnD),.ball(ball),.xcord(xcord),.ycord(ycord),.bord(bord));
-Animation_Color col (.V(V),.H(H),.clk(clk),.ball(ball),.Xpos(xcord),.Ypos(ycord),.Red(red),.Blue(blue),.Green(green));
+Animation_Color col (.V(V),.H(H),.moving(btnU|btnL|btnD|btnR),.Vsync(vedge),.clk(clk),.Xpos(xcord),.Ypos(ycord),.Red(red),.Blue(blue),.Green(green));
 
 assign led[3:0] = bord[3:0];
 
